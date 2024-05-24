@@ -1,0 +1,43 @@
+ls1=[1, 2, 2, 1]
+ls2=[2, 2];
+l1,l2=len(ls1),len(ls2)
+if(l1>l2):
+  larger_len=l1
+  smaller_len=l2
+else:
+  larger_len=l2
+  smaller_len=l1
+common=[]
+for i in range(larger_len):
+  for j in range(smaller_len):
+    if(ls1[i]==ls2[j]):
+      if ls2[j] in common:
+        continue
+      else:
+        common.append(ls2[j])
+print(common)
+    
+OR 
+
+first = [4, 9, 5]
+second = [9, 4, 9, 8, 4]
+
+def intersection(nums1, nums2):
+    s1 = set(nums1)
+    s2 = set(nums2)
+    return s1.intersection(s2)
+
+print(intersection(first, second))
+
+
+OR
+
+first = [4, 9, 5]
+second = [9, 4, 9, 8, 4]
+
+def intersection(nums1, nums2):
+  return list(filter(lambda num: num in nums2, nums1))
+
+print(intersection(first, second))
+
+   
